@@ -52,7 +52,7 @@ let options = {
         sheetPage: sheetPages.masterlist,
         logSheetPage: sheetPages.masterlistLog,
 
-        itemAmount: 12,
+        itemAmount: 13,
         itemOrder: "asc",
 
         filterColumn: 'Design Type',
