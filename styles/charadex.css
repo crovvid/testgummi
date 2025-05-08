@@ -32,7 +32,7 @@ body {
   --cd-faded-background-color:           #f8f8f8;
 
   /* Background Extras */
-  --cd-body-background-image:             linear-gradient(-45deg, #092948, #0c0948, #2d0948, #480944) fixed;
+  --cd-body-background-image:            linear-gradient(-45deg, #092948, #0c0948, #2d0948, #480944) fixed;
 
   /* ============================================================= */
   /* Text
@@ -210,7 +210,7 @@ body {
 
   /* Global Background */
   background-color: var(--cd-body-background-color);
-  background-image: var(--cd-body-background-image);
+  background: var(--cd-body-background-image);
   background-position: center;
   background-size: cover;
 
