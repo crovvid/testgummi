@@ -15,7 +15,7 @@ body {
   /* ============================================================= */
   /* Primary Color
   ================================================================ */
-  --cd-primary-color:                    #333;
+  --cd-primary-color:                    transparent;
   --cd-primary-text-color:               #70b6ff;
 
   /* ============================================================= */
@@ -28,8 +28,8 @@ body {
   /* Backgrounds
   ================================================================ */
   --cd-body-background-color:            #f8f8f8;
-  --cd-content-background-color:         rgba(3,5,32,0.87);
-  --cd-faded-background-color:           rgba(3,5,32,0.87);
+  --cd-content-background-color:         rgba(3,5,32,0.8);
+  --cd-faded-background-color:           rgba(0,0,0,0.5);
 
   /* Background Extras */
   --cd-body-background-image:            linear-gradient(-45deg, #092948, #0c0948, #2d0948, #480944) fixed;
@@ -37,8 +37,8 @@ body {
   /* ============================================================= */
   /* Text
   ================================================================ */
-  --cd-body-text-color:                  #303030;
-  --cd-faded-text-color:                 #575757;
+  --cd-body-text-color:                  #ad89c4;
+  --cd-faded-text-color:                 #70b6ff;
 
   /* ============================================================= */
   /* Borders
@@ -51,10 +51,10 @@ body {
   /* ============================================================= */
   /* Navbar
   ================================================================ */
-  --cd-navbar-background-color:          rgba(0,0,0,0.3);
-  --cd-navbar-brand-color:               var(--cd-primary-color);
+  --cd-navbar-background-color:          rgba(0,0,0,0.5);
+  --cd-navbar-brand-color:               #bd58ff;
   --cd-navbar-brand-color-hover:         var(--cd-secondary-color);
-  --cd-navbar-text-color:                var(--cd-content-background-color);
+  --cd-navbar-text-color:                var(--cd-secondary-color);
   --cd-navbar-link-color:                var(--cd-navbar-text-color);
   --cd-navbar-link-color-hover:          var(--cd-primary-color);
   --cd-navbar-font-family:               var(--cd-header-font-family);
@@ -144,7 +144,7 @@ body {
   
   /* Background */
   --cd-card-background-color:            var(--cd-content-background-color);
-  --cd-card-header-background-color:     var(--cd-card-background-color);
+  --cd-card-header-background-color:     var(--cd-navbar-background-color);
 
   /* Text */
   --cd-card-header-font-family:          var(--cd-header-font-family);
