@@ -210,7 +210,7 @@ body {
 
   /* Global Background */
   background-color: var(--cd-body-background-color);
-  background: var(--cd-body-background-image);
+  background-image: linear-gradient(-45deg, #092948, #0c0948, #2d0948, #480944) fixed;;
   background-position: center;
   background-size: cover;
 
