@@ -227,7 +227,7 @@ body {
 	}
 }
 .stars-bg {
-  background: url(https://f2.toyhou.se/file/f2-toyhou-se/images/95905209_uLwJaGNkQS3iDIv.png);
+  background-image: url(https://f2.toyhou.se/file/f2-toyhou-se/images/95905209_uLwJaGNkQS3iDIv.png)!important;
 }
 /* ============================================================= */
 /* Plain Links
