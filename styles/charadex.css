@@ -15,21 +15,21 @@ body {
   /* ============================================================= */
   /* Primary Color
   ================================================================ */
-  --cd-primary-color:                    #8FB7D4;
-  --cd-primary-text-color:               #fff;
+  --cd-primary-color:                    #333;
+  --cd-primary-text-color:               #70b6ff;
 
   /* ============================================================= */
   /* Secondary Color
   ================================================================ */
-  --cd-secondary-color:                  #939799;
-  --cd-secondary-text-color:             #fff;
+  --cd-secondary-color:                  #f95dff;
+  --cd-secondary-text-color:             #333;
 
   /* ============================================================= */
   /* Backgrounds
   ================================================================ */
   --cd-body-background-color:            #f8f8f8;
-  --cd-content-background-color:         #ffffff;
-  --cd-faded-background-color:           #f8f8f8;
+  --cd-content-background-color:         rgba(3,5,32,0.87);
+  --cd-faded-background-color:           rgba(3,5,32,0.87);
 
   /* Background Extras */
   --cd-body-background-image:            linear-gradient(-45deg, #092948, #0c0948, #2d0948, #480944) fixed;
@@ -43,15 +43,15 @@ body {
   /* ============================================================= */
   /* Borders
   ================================================================ */
-  --cd-border-color:                     rgba(0, 0, 0, 0.125);
+  --cd-border-color:                     hsla(60,29%,97%,.125);
   --cd-border-width:                     1px;
   --cd-border-style:                     solid;
-  --cd-border-radius:                    1rem;
+  --cd-border-radius:                    15px;
 
   /* ============================================================= */
   /* Navbar
   ================================================================ */
-  --cd-navbar-background-color:          #222222;
+  --cd-navbar-background-color:          rgba(0,0,0,0.3);
   --cd-navbar-brand-color:               var(--cd-primary-color);
   --cd-navbar-brand-color-hover:         var(--cd-secondary-color);
   --cd-navbar-text-color:                var(--cd-content-background-color);
@@ -84,7 +84,7 @@ body {
   --cd-navbar-dropdown-link-color-hover: var(--cd-primary-text-color);
 
   /* Divider */
-  --cd-navbar-dropdown-divider:          rgba(255,255,255,.12);
+  --cd-navbar-dropdown-divider:          #f95dff;
   --cd-navbar-dropdown-border-radius:    0 0 var(--cd-border-radius) var(--cd-border-radius);
 
 
