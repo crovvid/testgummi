@@ -215,8 +215,20 @@ body {
   background-size: cover;
 
 }
-
-
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.stars-bg {
+  background: url(https://f2.toyhou.se/file/f2-toyhou-se/images/95905209_uLwJaGNkQS3iDIv.png);
+}
 /* ============================================================= */
 /* Plain Links
 /* ============================================================= */
