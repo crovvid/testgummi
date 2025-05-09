@@ -365,11 +365,12 @@ const charadexLarge = async (options) => {
     // Grab all our url info
     let cardKey = Object.keys(sheetArray[0])[0];
     let preParam = urlParamFix(cardKey, charadexInfo.fauxFolderColumn);
+    let preParam = urlParamFix(cardKey, charadexInfo.fauxFolder2Column);
 
     // Create faux folders
     // Filter through array based on folders
     if (charadexInfo.fauxFolderColumn) sheetArray = fauxFolderButtons(sheetArray, charadexInfo.fauxFolderColumn);
-
+    if (charadexInfo.fauxFolder2Column) sheetArray = fauxFolder2Buttons(sheetArray, charadexInfo.fauxFolder2Column);
     // Reverse based on preference
     charadexInfo.itemOrder == 'asc' ? sheetArray.reverse() : '';
 
