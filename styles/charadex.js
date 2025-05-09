@@ -66,7 +66,6 @@ let optionSorter = (options) => {
         sheetPage: userOptions.sheetPage ? userOptions.sheetPage : "masterlist",
 
         fauxFolderColumn: userOptions.fauxFolderColumn ? keyCreator(userOptions.fauxFolderColumn) : false,
-        fauxFolder2Column: userOptions.fauxFolder2Column ? keyCreator(userOptions.fauxFolder2Column) : false,
         filterColumn: userOptions.filterColumn ? keyCreator(userOptions.filterColumn) : false,
         searchFilterParams: userOptions.searchFilterParams ? addAll(userOptions.searchFilterParams) : false,
 
@@ -265,47 +264,11 @@ let fauxFolderButtons = (array, fauxFolder, params = urlParams) => {
         }
 
     }
-/* ================================================================ */
-/* Faux Folder 2 Function
-/* ================================================================ */
-let fauxFolder2Buttons = (array, fauxFolder2, params = urlParams) => {
 
-    if (array[0].hasOwnProperty(fauxFolder2)) {
-
-        // Creates Param Object Array
-        let urlParamArray = [];
-        const uniqueArray = [...new Set(array.map(i => i[fauxFolder2]))].filter(n => n);
-        uniqueArray.forEach((i) => {
-            urlParamArray.push($('#charadex-filter-buttons-duo a').clone().text(i).attr("href", baseURL + '?' + fauxFolder2 + '=' + i.toLowerCase()));
-        });
-
-        if (urlParamArray.length > 1) {
-
-            // Adds All button
-            urlParamArray.unshift($('#charadex-filter-buttons-duo a').text('All').attr("href", baseURL));
-
-            // Smacks the links in your flex column
-            let btnCols = [];
-            for (var i in urlParamArray) { btnCols.push($('#charadex-filter-buttons-duo').html(urlParamArray[i]).clone()); }
-            $('#filter-buttons-duo .row').append(btnCols);
-
-            // Show Buttons
-            $('#filter-buttons-duo').show();
-
-        }
-
-    }
 
     // Filters out information based on URL parameters
     if (params.has(fauxFolder) && fauxFolder) {
         return array.filter((i) => i[fauxFolder].toLowerCase() === params.get(fauxFolder).toLowerCase());
-    } else {
-        return array;
-    }
-
-};
-     if (params.has(fauxFolder2) && fauxFolder2) {
-        return array.filter((i) => i[fauxFolder2].toLowerCase() === params.get(fauxFolder2).toLowerCase());
     } else {
         return array;
     }
@@ -365,12 +328,9 @@ const charadexLarge = async (options) => {
     // Grab all our url info
     let cardKey = Object.keys(sheetArray[0])[0];
     let preParam = urlParamFix(cardKey, charadexInfo.fauxFolderColumn);
-    let preParam = urlParamFix(cardKey, charadexInfo.fauxFolder2Column);
-
     // Create faux folders
     // Filter through array based on folders
     if (charadexInfo.fauxFolderColumn) sheetArray = fauxFolderButtons(sheetArray, charadexInfo.fauxFolderColumn);
-    if (charadexInfo.fauxFolder2Column) sheetArray = fauxFolder2Buttons(sheetArray, charadexInfo.fauxFolder2Column);
     // Reverse based on preference
     charadexInfo.itemOrder == 'asc' ? sheetArray.reverse() : '';
 
@@ -469,12 +429,9 @@ const masterlist = async (options) => {
     let cardKeyAlt = Object.keys(sheetArray[0])[0];
 
     let preParam = urlParamFix(cardKey, charadexInfo.fauxFolderColumn);
-    let preParam = urlParamFix(cardKey, charadexInfo.fauxFolder2Column);
-
     // Create faux folders
     // Filter through array based on folders
     if (charadexInfo.fauxFolderColumn) sheetArray = fauxFolderButtons(sheetArray, charadexInfo.fauxFolderColumn);
-    if (charadexInfo.fauxFolder2Column) sheetArray = fauxFolder2Buttons(sheetArray, charadexInfo.fauxFolder2Column);
 
     // Reverse based on preference
     charadexInfo.itemOrder == 'asc' ? sheetArray.reverse() : '';
@@ -484,10 +441,7 @@ const masterlist = async (options) => {
         sheetArray[i].cardlink = baseURL + preParam + sheetArray[i][cardKey]; 
         sheetArray[i].cardlinkalt = baseURL + urlParamFix(cardKeyAlt, charadexInfo.fauxFolderColumn) + sheetArray[i][Object.keys(sheetArray[0])[0]]; 
     }
-        for (var i in sheetArray) { 
-        sheetArray[i].cardlink = baseURL + preParam + sheetArray[i][cardKey]; 
-        sheetArray[i].cardlinkalt = baseURL + urlParamFix(cardKeyAlt, charadexInfo.fauxFolder2Column) + sheetArray[i][Object.keys(sheetArray[0])[0]]; 
-    }
+
 
     // Decide if the url points to profile or entire gallery
     if (urlParams.has(cardKey) || urlParams.has(cardKeyAlt)) {
