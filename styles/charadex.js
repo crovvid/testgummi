@@ -276,21 +276,21 @@ let fauxFolder2Buttons = (array, fauxFolder2, params = urlParams) => {
         let urlParamArray = [];
         const uniqueArray = [...new Set(array.map(i => i[fauxFolder2]))].filter(n => n);
         uniqueArray.forEach((i) => {
-            urlParamArray.push($('#charadex-filter-buttons a').clone().text(i).attr("href", baseURL + '?' + fauxFolder2 + '=' + i.toLowerCase()));
+            urlParamArray.push($('#charadex-filter-buttons-duo a').clone().text(i).attr("href", baseURL + '?' + fauxFolder2 + '=' + i.toLowerCase()));
         });
 
         if (urlParamArray.length > 1) {
 
             // Adds All button
-            urlParamArray.unshift($('#charadex-filter-buttons a').text('All').attr("href", baseURL));
+            urlParamArray.unshift($('#charadex-filter-buttons-duo a').text('All').attr("href", baseURL));
 
             // Smacks the links in your flex column
             let btnCols = [];
-            for (var i in urlParamArray) { btnCols.push($('#charadex-filter-buttons').html(urlParamArray[i]).clone()); }
-            $('#filter-buttons .row').append(btnCols);
+            for (var i in urlParamArray) { btnCols.push($('#charadex-filter-buttons-duo').html(urlParamArray[i]).clone()); }
+            $('#filter-buttons-duo .row').append(btnCols);
 
             // Show Buttons
-            $('#filter-buttons').show();
+            $('#filter-buttons-duo').show();
 
         }
 
