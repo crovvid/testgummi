@@ -253,11 +253,19 @@ a:active {
   background-color: var(--cd-navbar-background-color) !important;
   font-family: var(--cd-navbar-font-family) !important;
   z-index: 2000;
+  height: 145px;
+  margin-bottom: 20px;
 }
 
 .navbar .navbar-brand {
   color: var(--cd-navbar-brand-color) !important;
   font-size: 2rem;
+}
+
+.navbar-brand img {
+  max-width: 500px;
+  position: absolute;
+  top: 0px;
 }
 
 .navbar .navbar-brand:hover, 
@@ -337,6 +345,7 @@ a:active {
 .footer{
   background-color: var(--cd-footer-background-color) !important;
   color: var(--cd-footer-text-color) !important;
+  padding-top: 10px;
 }
 
 .footer a,
