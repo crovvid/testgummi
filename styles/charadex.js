@@ -3,7 +3,7 @@
 ======================================================================= */
 let url = new URL(window.location.href);
 let baseURL = window.location.origin + window.location.pathname;
-let folderURL = window.location.origin + '/' + window.location.pathname.replace(/\/[^\/]+$/, "");
+let folderURL = window.location.origin + window.location.pathname.replace(/\/[^\/]+$/, "");
 let urlParams = new URLSearchParams(window.location.search);
 
 
@@ -661,7 +661,7 @@ const frontPage = (options) => {
                 let indexEvents = newestEvents.slice(0, charadexInfo.numOfPrompts);
     
                 // Add card link
-                for (var i in indexEvents) { indexEvents[i].cardlink = folderURL + "prompts.html?" + cardKey + "=" + indexEvents[i][cardKey]; }
+                for (var i in indexEvents) { indexEvents[i].cardlink = folderURL + "/prompts.html?" + cardKey + "=" + indexEvents[i][cardKey]; }
     
                 // Nyoom
                 let galleryOptions = {
@@ -717,7 +717,7 @@ const frontPage = (options) => {
 
                 // Add cardlink
                 let cardKey = Object.keys(selectDesigns[0])[0];
-                for (var i in selectDesigns) { selectDesigns[i].cardlink = folderURL + "masterlist.html?" + cardKey + "=" + selectDesigns[i][cardKey]; }
+                for (var i in selectDesigns) { selectDesigns[i].cardlink = folderURL + "/masterlist.html?" + cardKey + "=" + selectDesigns[i][cardKey]; }
 
                 // Nyoom
                 let galleryOptions = {
