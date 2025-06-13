@@ -264,6 +264,7 @@ a:active {
 
 .navbar-brand img {
   max-width: 500px;
+  width: 50%;
   position: absolute;
   top: 0px;
 }
@@ -662,4 +663,14 @@ p:last-child {
         letter-spacing: 2px;
         font-size: 5rem;
     }
+}
+@media (max-width: 768px) {
+	.navbar-brand img {
+		margin-top: 6%;
+	}
+}
+@media (max-width:510px){
+	.navbar-brand img {
+		margin-top: 10%;
+	}
 }
