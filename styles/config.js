@@ -52,11 +52,11 @@ let options = {
         sheetPage: sheetPages.masterlist,
         logSheetPage: sheetPages.masterlistLog,
 
-        itemAmount: 14,
+        itemAmount: 17,
         itemOrder: "asc",
 
         filterColumn: 'Design Type',
-        searchFilterParams: ['ID', 'Name', 'Owner', 'Designer', 'Artist', 'Subspecies'],
+        searchFilterParams: ['ID', 'Name', 'Owner', 'Designer', 'Artist', 'Subspecies','Basics','Hoard','Gummi','Mutations'],
         fauxFolderColumn: 'Species', 
 
     },
